@@ -28,8 +28,8 @@ def img_upload():
 
         #Call the function to predict
         true, pred = img_pred(file_path,model)
-
-        return f"TRUE: {true} and PREDICTION: {pred}"
+        result = "TRUE: "+true+ " and PREDICTION: "+pred
+        return result
     return None
 
 
