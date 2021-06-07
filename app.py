@@ -25,7 +25,8 @@ def img_upload():
 
         # save the input img to uploads folder
         upload = os.path.dirname(__file__)  # get the root dir of this folder
-        file_path = os.path.join(upload, "uploads", secure_filename=(img_file.name))
+        secure_filename=img_file.name
+        file_path = os.path.join(upload, "uploads", secure_filename)
         img_file.save(file_path)
 
         # Call the function to predict
