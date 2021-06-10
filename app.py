@@ -30,8 +30,10 @@ def img_upload():
         img_file.save(file_path)
 
         # Call the function to predict
-        true, pred = img_pred(file_path, model)
-        result = "TRUE: " + true + " and PREDICTION: " + pred
+        # true, pred = img_pred(file_path, model)
+        pred = img_pred(file_path, model)
+        # result = "TRUE: " + true + " and PREDICTION: " + pred
+        result = "Model Predicted this as : " + pred
         return result
     return None
 

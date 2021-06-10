@@ -40,8 +40,9 @@ def img_pred(path, model):
     images = np.vstack([x])
     classes = model.predict_classes(images, batch_size=10)  # will give the index
 
-    full = os.path.splitext(path)[0]
-    img_name = full.split("/")[-1]
-    true_lab = re.split("_\d+", img_name)[0]
+    # full = os.path.splitext(path)[0]
+    # img_name = full.split("/")[-1]
+    # true_lab = re.split("_\d+", img_name)[0]
 
-    return true_lab, class_lab[classes[0]]
+    # return true_lab, class_lab[classes[0]]
+    return class_lab[classes[0]]
